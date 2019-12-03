@@ -1,0 +1,675 @@
+.container-fluid {
+  width: 100%;
+  position: relative;
+}
+
+.container-fluid .banner_img {
+  background-image: url("./img/08-banner/product-banner.jpg");
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.container-fluid .banner_img .border_top {
+  width: 90%;
+  height: 15vh;
+  border: 3px solid #aa7374;
+  margin: 90px auto;
+  border-bottom: 0;
+  position: absolute;
+  left: 5%;
+}
+
+.container-fluid .banner_img .border_bottom {
+  border: 3px solid #aa7374;
+  width: 90%;
+  height: 52vh;
+  position: absolute;
+  top: 38%;
+  left: 5%;
+  z-index: 1;
+}
+/* 選單白底 寫relative 吃東西的女生就會出來 but banner的swiper會被推下去*/
+.container-fluid .banner_img .main-navigation {
+  position: absolute;
+  top: calc(15vh + 180px);
+  left: 30px;
+}
+.container-fluid .banner_img .main-navigation .inner_box {
+  font-family: "Tangerine", cursive;
+  margin: 0;
+  font-size: 6vmin;
+  position: relative;
+  z-index: 2;
+  height: 150%;
+  width: 60%;
+  opacity: 0;
+  pointer-events: none;
+  left: -500px;
+  transition: opacity 1s, left 3s;
+}
+
+.container-fluid .banner_img .main-navigation .inner_box.active {
+  opacity: 1;
+  pointer-events: all;
+  left: 0;
+  -webkit-transition: opacity 3s, left 2s;
+  transition: opacity 3s, left 2s;
+}
+
+.container-fluid .banner_img .main-navigation .inner_box .ul_box {
+  background-color: #fffcf8;
+  letter-spacing: 1px;
+  list-style-type: none;
+  position: absolute;
+  top: -14.5rem;
+  transform: translate(8.5%, 0);
+  /* padding: 40% 90% 13.7% 35%; */
+  line-height: 1px;
+  /* margin-bottom: 0; */
+  white-space: nowrap;
+  color: #775254;
+}
+.container-fluid .banner_img .main-navigation .inner_box .ul_box li {
+  /* width: 100px; */
+  height: 16vh;
+  /* margin: 0 200px; */
+  padding: 60px 250px;
+}
+.container-fluid .banner_img .main-navigation .inner_box .ul_box a {
+  color: #775254;
+  font-family: "Tangerine", cursive;
+}
+
+/* 吃蛋糕的女生圖片 */
+.container-fluid .banner_img .main-navigation .inner_box .nav_img {
+  background-image: url("./img/navbar.jpg");
+  background-size: cover;
+  position: absolute;;
+  top: -15.2rem;
+  left: 133.7%; 
+  width: 80%;
+  height: 80.5vh;
+}
+.container-fluid .banner_img .main-navigation .toggle_button {
+  position: absolute;
+  z-index: 3;
+  /* left: 3.7%;
+  top: -95px; */
+  transform: translate(95%, -80%);
+}
+/* .link_3{
+  border-block-width: 0;
+} */
+.container-fluid .banner_img .main-navigation .toggle_button .circle {
+  border: 2.5px solid #aa7374;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  margin: 25% 0 0 30%;
+}
+
+.container-fluid .banner_img .main-navigation .toggle_button .line {
+  border-top: 2.5px solid #aa7374;
+  width: 3rem;
+  margin: 30% 0;
+}
+.container-fluid .logo {
+  position: absolute;
+  top: calc(15vh + 180px);
+  right: 20px;
+}
+.container-fluid .logo img {
+  position: absolute;
+  transform: translate(-110%, -65%);
+  z-index: 3;
+  /* left:
+  top: -90px; */
+  height: 140px;
+}
+/* produce chaat text */
+.container-fluid .banner_img h1 {
+  position: absolute;
+  top: 17%;
+  left: 66%;
+  background-color: #f9ebdc;
+  width: 15%;
+  height: 8vh;
+  text-align: center;
+  font-family: "Tangerine", cursive;
+  color: #775254;
+  font-size: 3em;
+  padding: 5px 0;
+}
+
+/* .container-fluid .banner_img p {
+  text-align: center;
+  font-family: "Tangerine", cursive;
+  color: #775254;
+  font-size: 35px;
+  letter-spacing: 2px;
+  width: 50%;
+  position: absolute;
+  top: 36%;
+  left: 40%;
+} */
+
+/* 熱銷商品 */
+.img1 {
+  width: 70%;
+  border-radius: 50%;
+  border: #775254 2px solid;
+  transform: translate(22%,-5%);
+}
+
+.swiper-pagination {
+  transform: translate(-3%, -600%);
+}
+
+html,
+body {
+  position: relative;
+  height: 60%;
+}
+body {
+  background: #fcf5f5;
+  font-size: 15px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  background-image: url("./img/BG.jpg");
+}
+.container {
+  margin-bottom: 150px;
+}
+.swiper-container {
+  width: 60%;
+  height: 100%;
+  margin-top: 3em;
+}
+
+.swiper-container-banner {
+  width: calc(90% - 100px);
+  padding: 90px 0;
+  margin-top: 5px;
+}
+
+.swiper-container-banner .swiper-slide {
+  display: flex;
+  align-items: center;
+}
+/* .swiper-slide {
+  text-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+} */
+
+:root {
+  --swiper-theme-color: #17a2b8;
+}
+/* .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 50px;
+  left: 0;
+  width: 100%;
+} */
+.product {
+  position: relative;
+}
+.img {
+  transform: translate(60%, 0);
+}
+.text1 {
+  font-size: 1.3em;
+  font-family: "Tangerine", cursive;
+  color: #775254;
+  /* margin-top: 10px; */
+  transform: translate(40%, 15%);
+  padding:10px 30px;
+}
+
+.text2 {
+  font-size: 2em;
+  font-family: "Tangerine", cursive;
+  color: #775254;
+  transform: translate(40%, 40%);
+  
+}
+
+.border0 {
+  width: 300px;
+  height: 20px;
+  margin: auto;
+  padding: 10px 20px;
+  text-align: center;
+  box-sizing: border-box;
+  position: relative;
+  top: 20px;
+  margin-bottom: 138px;
+}
+.title {
+  font-size: 50px;
+  font-family: "Tangerine", cursive;
+  color: #775254;
+  margin: auto;
+  position: relative;
+  z-index: 999;
+  box-sizing: border-box;
+  display: inline-block;
+  
+ 
+}
+.swiper-button-prev {
+  transform: translate(110%, 0);
+}
+.line_12::before {
+  content: "";
+  display: block;
+  height: 3px;
+  background-color: #f7d7e4;
+  position: absolute;
+  left: 15%;
+  top: 440%;
+  z-index: 1;
+  transition: 2s;
+  border-style: Solid;
+  border-color: #f7d7e4;
+  border-width: 2px;
+  width: 70%;
+}
+
+.line_01::before {
+  content: "";
+  display: block;
+  height: 5px;
+  background-color: #f7d7e4;
+  position: absolute;
+  left: 25%;
+  top: 440%;
+  z-index: 1;
+  transition: 2s;
+  border-style: Solid;
+  border-color: #f7d7e4;
+  border-width: 2px;
+  width: 50%;
+}
+.text3 {
+  font-size: 2em;
+  font-family: "Tangerine", cursive;
+  color: #775254;
+  transform: translate(35%, 40%);
+}
+.line_0::before {
+  content: "";
+  display: block;
+  height: 3px;
+  background-color: #b1d9e0;
+  position: absolute;
+  left: 8%;
+  top: 88px;
+  z-index: 1;
+  transition: 2s;
+  border-style: Solid;
+  border-color: #b1d9e0;
+  border-width: 2px;
+  width: 85%;
+}
+.text4 {
+  font-size: 2em;
+  font-family: "Tangerine", cursive;
+  color: #775254;
+  transform: translate(42%, 40%);
+}
+.line_4::before {
+  content: "";
+  display: block;
+  height: 3px;
+  background-color: #b1d9e0;
+  position: absolute;
+  left: 25%;
+  top: 88px;
+  z-index: 1;
+  transition: 2s;
+  border-style: Solid;
+  border-color: #b1d9e0;
+  border-width: 2px;
+  width: 50%;
+}
+.text5 {
+  font-size: 2em;
+  font-family: "Tangerine", cursive;
+  color: #775254;
+  transform: translate(45%, 45%);
+}
+.line_5::before {
+  content: "";
+  display: block;
+  height: 5px;
+  background-color: #b1d9e0;
+  position: absolute;
+  left: 30%;
+  top: 88px;
+  z-index: 1;
+  transition: 2s;
+  border-style: Solid;
+  border-color: #b1d9e0;
+  border-width: 2px;
+  width: 40%;
+}
+.text6 {
+  font-size: 2em;
+  font-family: "Tangerine", cursive;
+  color: #775254;
+  transform: translate(45%, 40%);
+}
+.line_6::before {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: #b1d9e0;
+  position: absolute;
+  left: 37%;
+  top: 88px;
+  z-index: 1;
+  transition: 2s;
+  border-style: Solid;
+  border-color: #b1d9e0;
+  border-width: 2px;
+  width: 25%;
+}
+.text7 {
+  font-size: 2em;
+  font-family: "Tangerine", cursive;
+  color: #775254;
+  transform: translate(42%, 40%);
+}
+.container-fluid1 {
+  background-image: url("./img/08-banner/product-footer.jpg");
+  height: 30vh;
+  position: relative;
+  margin-bottom: 0;
+}
+
+.container-fluid1 p {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  font-family: "Tangerine", cursive;
+  font-size: 25px;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #775254;
+}
+
+/* 互動視窗 */
+
+.container{
+  display:flex;
+  
+}
+.img_1{
+  margin-left:0px;
+}
+.modal-body .container .thing .thing_1{
+  font-family: "Tangerine", cursive;
+  font-size:1.5em;
+}
+
+.thing{
+  margin-left:28px;
+  font-size:11px;
+  letter-spacing: 0.2em;
+
+ 
+}
+.thing_1::before {
+  content: "";
+  width: 2%;
+  height:3%;
+  background-color: #775254;
+  border-radius: 50%;
+  position: absolute;
+  left: 49%;
+  top: 7%;
+}
+
+  /* display: block;   */
+.modal-body .container .thing .thing_2{
+    font-family: "Tangerine", cursive;
+    font-size:1.5em;
+  
+}
+.thing_2::before {
+  content: "";
+  width: 2%;
+  height:3%;
+  background-color: #775254;
+  border-radius: 50%;
+  position: absolute;
+  left: 49%;
+  top: 16%;
+}
+.modal-body .container .thing .thing_3{
+  font-family: "Tangerine", cursive;
+  font-size:1.5em;
+}
+.thing_3::before {
+  content: "";
+  width: 2%;
+  height:3%;
+  background-color: #775254;
+  border-radius: 50%;
+  position: absolute;
+  left: 49%;
+  top: 25%;
+}
+
+/* 商品名稱 */
+
+/* .modal-content {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 3px solid #aa7374;
+  border-radius: .3rem;
+  outline: 0;
+  opacity: 0.9;
+} */
+.h5, h5 {
+  font-size: 3rem;
+  margin:auto;
+  margin-left:33%;
+  font-family: "Tangerine", cursive;
+  color: #775254;
+}
+
+
+/* .modal-body {
+  position: relative;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding-bottom: 0;
+  height:300px;
+} */
+
+ 
+  
+
+
+/* 互動視窗>>+ - 按鈕 */
+
+/* .alert {
+  position: relative;
+  padding: .75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  margin-left: -50px;
+}
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  letter-spacing: 0.2em;
+} */
+
+.btnleft {
+  height: 100%;
+  width: 25%;
+  float: left;
+}
+
+.btnleft img {
+  margin-bottom: 3px;
+}
+
+/* fake button img */
+.product_item{
+  display:flex;
+  
+}
+#a_one_m{
+  margin-top: 223%;
+  margin-left: 120%;
+}
+.btnStyleLeft{
+  width:30px;
+  height:20px;
+}
+.price{
+  margin-top: 27%;
+  display: inline-block;
+  font-family: "Tangerine", cursive;
+  color: #775254;
+  font-size: 2em;
+}
+.modal-footer{
+  margin-left:35%;
+  font-family: "Tangerine", cursive;
+  color: #775254;
+  font-size: 2em;
+  display: inline-block;
+}
+.btnright img {
+  padding-bottom: 4px;
+  padding-left: 1px;
+}
+
+.modal-title {
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+
+
+
+/* 1_2 */
+/* element.style1_2 {
+  display: none;
+}
+.fade:not(.show)1_2 {
+  opacity: 0;
+}
+.modal1_2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: 0;
+}
+
+.fade1_2{
+  transition: opacity .15s linear;
+}
+
+element.style1_2 {
+  display: block;
+}
+.modal-open .modal1_2 {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.fade1_2 {
+  transition: opacity .15s linear;
+}
+.modal1_2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: 0;
+} */
+
+/* 按了+-會改變數字的地方 */
+/* .btn_M {
+  height: 100%;
+  width: 50%;
+  float: left;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 1);
+  border: none;
+  border-top: 2px solid #7d7d7d;
+  border-bottom: 2px solid #7d7d7d;
+} */
+/* 
+input {
+  border-radius: 0;
+  padding: 0;
+}
+input {
+  -webkit-writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  color: initial;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  -webkit-appearance: textfield;
+  background-color: white;
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  margin: 0em;
+  font: 400 13.3333px Arial;
+  padding: 1px 0px;
+  border-width: 2px;
+  border-style: inset;
+  border-color: initial;
+  border-image: initial;
+} */
+/* .btnright {
+  height: 100%;
+  width: 25%;
+  float: left;
+} */
+/* .btnStyleRight {
+  background-color: #7d7d7d;
+  border: none;
+  padding-top: 1px;
+  padding-left: 6px;
+  border-radius: 0 5px 5px 0;
+} */
+

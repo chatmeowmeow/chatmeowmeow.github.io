@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <style>
+        .d-none {
+            display: none;
+        }
+
+        .product_modal_body {
+            width: 300px;
+            height: 500px;
+            border: 1px solid black;
+            background-color: aquamarine;
+            letter-spacing: 1.8px;
+            position: fixed;
+            left: calc(50vw - 150px);
+            top: calc(50vh - 250px);
+            z-index: 20;
+            opacity: 1;
+            animation: drop-body .5s linear;
+        }
+
+        .product_modal_mask {
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 15;
+            opacity: 1;
+            animation: drop-mask .5s linear;
+        }
+
+        .active {
+            display: block;
+        }
+
+        @keyframes drop-mask {
+            0%{
+                opacity: 0;
+            }
+        }
+        
+        @keyframes drop-body {
+            0%{
+                opacity: 0;
+                top: calc(50vh - 275px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="product_modal">
+        <div class="product_modal_btn">互動視窗</div>
+        <div class="product_modal_body d-none">Lorem1</div>
+    </div>
+
+    <div class="product_modal">
+        <div class="product_modal_btn">互動視窗</div>
+        <div class="product_modal_body d-none">Lorem2</div>
+    </div>
+
+    <div class="product_modal">
+        <div class="product_modal_btn">互動視窗</div>
+        <div class="product_modal_body d-none">Lorem3</div>
+    </div>
+    <div class="product_modal">
+        <div class="product_modal_btn">互動視窗</div>
+        <div class="product_modal_body d-none">Lorem4</div>
+    </div>
+
+    <div class="product_modal">
+        <div class="product_modal_btn">互動視窗</div>
+        <div class="product_modal_body d-none">Lorem5</div>
+    </div>
+
+    <div class="product_modal">
+        <div class="product_modal_btn">互動視窗</div>
+        <div class="product_modal_body d-none">Lorem6</div>
+    </div>
+
+    <div class="product_modal">
+        <div class="product_modal_btn">互動視窗</div>
+        <div class="product_modal_body d-none">Lorem7</div>
+    </div>
+
+    <div class="product_modal_mask d-none"></div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script>
+
+        $('.product_modal_btn').click(function () {
+            $(this).next().addClass('active');
+            $('.product_modal_mask').addClass('active');
+        })
+
+        $('.product_modal_mask').click(function () {
+            $('.product_modal_body').removeClass('active');
+            $('.product_modal_mask').removeClass('active');
+        })
+
+
+    </script>
+</body>
+
+</html>
