@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .container-fluid {
   width: 100%;
   position: relative;
@@ -169,6 +170,8 @@
 }
 
 .section1 .container .top .text {
+  -webkit-transform: translate(-10%, 8%);
+          transform: translate(-10%, 8%);
   text-align: justify;
   letter-spacing: 3px;
   color: #775254;
@@ -192,7 +195,7 @@
 }
 
 .section1 .container .top .box .page_img {
-  background-image: url("./img/03.jpg");
+  background-image: url("./分頁一-修改完成/img/03.jpg");
   width: 400px;
   height: 500px;
   background-size: cover;
@@ -236,7 +239,7 @@
 }
 
 .section1 .container .bottom .box .page_img1 {
-  background-image: url("./img/04.jpg");
+  background-image: url("./分頁一-修改完成/img/04.jpg");
   width: 270px;
   height: 390px;
   background-size: cover;
@@ -247,8 +250,8 @@
 
 .section1 .container .bottom .text {
   position: absolute;
-  -webkit-transform: translate(180%, 270%);
-          transform: translate(180%, 270%);
+  -webkit-transform: translate(160%, 270%);
+          transform: translate(160%, 270%);
   letter-spacing: 2px;
   color: #775254;
   font-family: "Tangerine", cursive;
@@ -270,7 +273,7 @@
 }
 
 .section2 .container .you_img {
-  background-image: url("./img/05.jpg");
+  background-image: url("./分頁一-修改完成/img/05.jpg");
   width: 100%;
   background-size: cover;
   position: absolute;
@@ -315,7 +318,7 @@
 }
 
 .section3 .container .top .box .page_img {
-  background-image: url("./img/123.jpg");
+  background-image: url("./分頁一-修改完成/img/123.jpg");
   width: 400px;
   height: 550px;
   background-size: cover;
