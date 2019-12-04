@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Tangerine:700&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <style>
+        .d-none {
+            display: none;
+        }
+
+        .product_modal_body {
+            width: 600px;
+            height: 450px;
+            border: 7px outset #aa7374;
+            background-color: #fffcf893;
+            letter-spacing: 1.8px;
+            position: fixed;
+            left: calc(50vw - 300px);
+            top: calc(50vh - 250px);
+            z-index: 20;
+            opacity: 1;
+            animation: drop-body .5s linear;
+
+        }
+
+        .product_modal_mask {
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 15;
+            opacity: 1;
+            animation: drop-mask .5s linear;
+        }
+
+        h2 {
+            display: inline-block;
+            margin-left: 40%;
+            margin-bottom: 0;
+            font-size: 35px;
+            font-family: "Tangerine", cursive;
+            font-weight: bold;
+            color: #775254;
+
+        }
+
+        .body_m {
+            display: flex;
+            width: 68vh;
+        }
+
+        .body_m img {
+            /* flex-shrink:1; */
+            margin-left: 20px;
+            margin-top: -35px;
+        }
+
+        .body_r_b {
+            display: flex;
+            margin-top: 50px;
+        }
+
+        .body_r_b img {
+            margin-left: 50px;
+            width: 100px;
+            height: 30px;
+            margin-top: 0px;
+        }
+
+        .thing_all {
+            margin-top: 30px;
+            margin-left: 100px;
+            font-size: 20px;
+            letter-spacing: 0.1em;
+            font-family: "Tangerine", cursive;
+            font-weight: bold;
+            line-height: 1.5;
+            color: #775254;
+        }
+
+        button {
+            margin-left: 40%;
+            margin-bottom: 0;
+            font-size: 35px;
+            font-family: "Tangerine", cursive;
+            font-weight: bold;
+            color: #775254;
+            padding:10px 30px;
+            background-color: #f7d7e4;
+        }
+
+
+
+        .thing_1::before {
+            content: "";
+            width: 1.5%;
+            height: 1.5%;
+            background-color: #775254;
+            border-radius: 50%;
+            position: absolute;
+            left: 53%;
+            top: 24%;
+        }
+
+        .thing_2::before {
+            content: "";
+            width: 1.5%;
+            height: 1.5%;
+            background-color: #775254;
+            border-radius: 50%;
+            position: absolute;
+            left: 53%;
+            top: 30%;
+        }
+
+        .thing_3::before {
+            content: "";
+            width: 1.5%;
+            height: 1.5%;
+            background-color: #775254;
+            border-radius: 50%;
+            position: absolute;
+            left: 53%;
+            top: 37%;
+        }
+
+        .active {
+            display: block;
+        }
+
+        @keyframes drop-mask {
+            0% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes drop-body {
+            0% {
+                opacity: 0;
+                top: calc(50vh - 275px);
+            }
+        }
+    </style>
+</head>
+
+<!-- <div class="img_1" img src="./img/01-cake/cake-02.png" width="30%" alt=""></div>
+<div class="thing">
+    <div class="thing_1">French Blue Silk Fresh Cream</div>
+    <div class="thing_2">Tahiti Vanilla Pods</div>
+    <div class="thing_3">Honey sponge cake</div>
+</div>
+<div class="price_item">
+    <div class="price">NT 999</div>
+    <div class="img_2" img src="./img/button.png" width="50vh" alt=""></div>>
+</div> -->
+
+
+<body>
+    <div class="product_modal">
+        <div class="product_modal_btn">Bumblebee</div>
+        <div class="product_modal_body d-none">
+            <h2>Bumblebee</h2>
+            <div class="body_m">
+                <img src="./img/01-cake/cake-02.png" width="40%" alt="">
+                <div class="thing_all">
+                    <div class="thing_1">French Blue Silk Fresh Cream</div>
+                    <div class="thing_2">Tahiti Vanilla Pods</div>
+                    <div class="thing_3">Honey sponge cake</div>
+
+                    <div class="body_r_b">
+                        <div class="price">NT 999</div>
+                        <img src="./img/button.png" width="30%" alt="">
+                    </div>
+                </div>
+            </div>
+            <button>Buy Now</button>
+        </div>
+    </div>
+
+    
+
+
+
+
+
+
+    <div class="product_modal">
+        <div class="product_modal_btn">互動視窗</div>
+        <div class="product_modal_body d-none">Lorem2</div>
+    </div>
+
+    <div class="product_modal">
+        <div class="product_modal_btn">互動視窗</div>
+        <div class="product_modal_body d-none">Lorem3</div>
+    </div>
+    <div class="product_modal">
+        <div class="product_modal_btn">互動視窗</div>
+        <div class="product_modal_body d-none">Lorem4</div>
+    </div>
+
+    <div class="product_modal">
+        <div class="product_modal_btn">互動視窗</div>
+        <div class="product_modal_body d-none">Lorem5</div>
+    </div>
+
+    <div class="product_modal">
+        <div class="product_modal_btn">互動視窗</div>
+        <div class="product_modal_body d-none">Lorem6</div>
+    </div>
+
+    <div class="product_modal">
+        <div class="product_modal_btn">互動視窗</div>
+        <div class="product_modal_body d-none">Lorem7</div>
+    </div>
+
+    <div class="product_modal_mask d-none"></div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script>
+
+        $('.product_modal_btn').click(function () {
+            $(this).next().addClass('active');
+            $('.product_modal_mask').addClass('active');
+        })
+
+        $('.product_modal_mask').click(function () {
+            $('.product_modal_body').removeClass('active');
+            $('.product_modal_mask').removeClass('active');
+        })
+
+
+    </script>
+</body>
+
+</html>

@@ -141,8 +141,8 @@
 
 @media screen and (max-width: 375px) {
   .container-fluid .banner_img .main-navigation .toggle_button {
-    top: -450px;
-    left: 40px;
+    top: -65px;
+    left: 160px;
   }
 }
 
