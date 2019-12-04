@@ -1,9 +1,8 @@
 $yellow: #f9ebdc;
 $blue: #bfd8d2;
-$coffee: #775254;
-$bg: #fcf5f5;
-$border: #aa7374;
-$pink: #ffebeb;
+$coffee:#775254;
+$bg:#fcf5f5;
+$border:#aa7374;
 .container-fluid {
   width: 100%;
   position: relative;
@@ -13,25 +12,36 @@ $pink: #ffebeb;
     width: 100%;
     background-size: cover;
     background-position: center;
+    @media screen and (max-width:375px) {
+      width:100%;
+      height:25vh;
+    }
     .border_top {
       width: 90%;
       height: 15vh;
       border: 3px solid $border;
       margin: 90px auto;
       border-bottom: 0;
+      @media screen and (max-width:375px) {
+        display: none;
+      }
     }
     .border_bottom {
       border: 3px solid $border;
       width: 90%;
-      height: 341vh;
+      height: 340vh;
       position: absolute;
-      top: 39%;
+      top: 38%;
       left: 5%;
-      z-index: 100;
-      // transform: translate(0,200%);
+      z-index: 1;
+      @media screen and (max-width:375px) {
+        display: none;
+      }
     }
     .main-navigation {
       position: relative;
+      // width: 100%;
+      // height:80vh ;
       .inner_box {
         font-family: "Tangerine", cursive;
         margin: 0;
@@ -44,13 +54,20 @@ $pink: #ffebeb;
         opacity: 0;
         pointer-events: none;
         left: -500px;
-        transition: 1s, left 2s;
+        transition:opacity 1s,left 3s;
+        padding: 15% -25% 3% 55%;
         &.active {
           // display: block;
           opacity: 1;
           pointer-events: all;
           left: 0;
-          transition: opacity 3s, left 2s;
+          transition:opacity 3s,left 2s;
+          // width:100%;
+          // height: 80vh;
+          @media screen and (max-width: 375px) {
+            left: unset;
+            top: 0;
+          }
         }
         .ul_box {
           background-color: #fffcf8;
@@ -63,9 +80,25 @@ $pink: #ffebeb;
           line-height: 100px;
           margin-bottom: 0;
           white-space: nowrap;
-          // color: $coffee;
-          a {
-            color: $coffee;
+          color: $coffee;
+          // width:100%;
+          // height: 80vh;
+          @media screen and (max-width: 375px) {
+            background-color: unset;
+            background-image: url("./img/navbar.jpg");
+            background-size: cover;
+            width:205%;
+            height: 70vh;
+            transform: translate(-5%,35.5%);
+            line-height: 100px;
+          }
+          a{
+            color:$coffee ;
+            // @media screen and (max-width:375px){
+            //   font-size: 30px;
+            //   line-height: 100px;
+            //   letter-spacing: 5px;
+            // }
           }
         }
         .nav_img {
@@ -75,7 +108,10 @@ $pink: #ffebeb;
           top: -15.2rem;
           left: 133.7%;
           width: 56%;
-          height: 80.5vh;
+          height:88.2vh;
+          @media screen and (max-width:375px){
+            display: none;
+          }
         }
       }
       .toggle_button {
@@ -83,12 +119,18 @@ $pink: #ffebeb;
         z-index: 3;
         left: 3.7%;
         top: -75px;
+        @media screen and (max-width:375px) {
+          top:5px;
+        }
         .circle {
           border: 2.5px solid #aa7374;
           width: 1rem;
           height: 1rem;
           border-radius: 50%;
           margin: 25% 0 0 30%;
+          @media screen and (max-width:375px) {
+            display: none;
+          }
         }
 
         .line {
@@ -102,34 +144,34 @@ $pink: #ffebeb;
       width: 6%;
       // height: 500px;
       position: absolute;
-      transform: translate(-35%, -390%);
+      transform: translate(-35%, -395%);
       right: 0;
+      @media screen and (max-width:575px) {
+        display:none;
+      }
     }
     h1 {
       position: absolute;
-      top: 43%;
+      top: 41%;
       left: 40%;
-      transform: translate(-50%, -50%);
-      background-color: $yellow;
+      transform: translate(-50%,-50%);
+      background-color:$yellow;
       width: 16%;
       height: 10vh;
       text-align: center;
       font-family: "Tangerine", cursive;
       color: $coffee;
       font-size: 70px;
-      padding: 5px 0;
-    }
-    p {
-      text-align: center;
-      // margin-top:34%;
-      font-family: "Tangerine", cursive;
-      color: #775254;
-      font-size: 35px;
-      letter-spacing: 2px;
-      width: 50%;
-      position: absolute;
-      top: 36%;
-      left: 40%;
+      @media screen and (max-width:375px) {
+        display: unset;
+        font-size: 35px;
+        width: 70%;
+        height: 5vh;
+        // padding: 0 5px;
+        top: 40%;
+        left: 30%;
+        background-color:rgba(255, 255, 255, 0.623);
+      }
     }
   }
 }
@@ -141,7 +183,7 @@ $pink: #ffebeb;
     height: 80vh;
     // background-image: url("./img/06.jpg");
     position: relative;
-    .img_box {     
+    .img_box {
       .photo {
         background-image: url(./img/02.jpg);
         background-size: cover;
@@ -149,17 +191,25 @@ $pink: #ffebeb;
         height: 400px;
         position: absolute;
         transform: translate(30%, 40%);
-        z-index: 100;
-        // transition: 2s;
-        // &:hover {
-        //   transform: scale(1.5);
-        // }
+        z-index:10;
+        @media screen and (max-width: 375px) {
+          // display: unset;
+          transform: unset;
+          width: 200px;
+          height: 300px;
+          margin:80px 85px ;
+          position: unset;
+         
+        }
       }
       .bg {
         background-color: $blue;
         width: 300px;
         height: 400px;
         transform: translate(10%, 50%);
+        @media screen and (max-width: 375px) {
+          display: none;
+        }
       }
     }
     .content_box {
@@ -173,10 +223,27 @@ $pink: #ffebeb;
         letter-spacing: 2px;
         transform: translate(33.5%, 85%);
         text-align: justify;
-        background-color: $pink;
+        background-color:#ffebeb;
         padding: 10px 0 10px 60px;
+        @media screen and (max-width: 375px) {
+          display: unset;
+          background-color: unset;
+          font-size: 20px;
+          
+
+         
+          p{
+            display: none;
+          }
+        }
+        
         h1 {
           color: 40px;
+          @media screen and (max-width: 375px) {
+            // background-color: unset;
+            font-size: 20px;
+            margin-top:450px ;
+          }
         }
       }
       .btn {
@@ -184,6 +251,11 @@ $pink: #ffebeb;
         color: white;
         font-family: "Tangerine", cursive;
         font-size: 25px;
+        @media screen and (max-width: 375px) {
+          // display: unset;
+          transform: unset;
+          margin:50px 0 0 115px ;
+        }
       }
       #exampleModalLong1 {
         font-family: "Tangerine", cursive;
@@ -191,8 +263,16 @@ $pink: #ffebeb;
         font-size: 28px;
         letter-spacing: 2px;
         text-align: justify;
+        @media screen and (max-width: 375px) {
+          // background-color: unset;
+          font-size: 20px;
+          width:44%;
+        }
         #exampleModalLongTitle {
           font-size: 35px;
+          @media screen and (max-width: 375px) {
+            font-size: 25px;
+          }
         }
       }
     }
@@ -202,14 +282,18 @@ $pink: #ffebeb;
   background-color: $bg;
   background-image: url("./img/06.jpg");
   .container {
-    // background-color: $bg;
-    // background-image: url("./img/06.jpg");
-    height: 80vh;
     position: relative;
+    height: 80vh;
     .img_box {
       transform: translate(-75%, 0%);
+      @media screen and (max-width: 375px) {
+        transform: unset;
+        width:100%;
+        display: flex;
+        justify-content: center;
+      }
       .photo {
-        background-image: url(./img/03.jpg);
+        background-image: url("./img/03.jpg");
         width: 300px;
         height: 400px;
         position: absolute;
@@ -217,17 +301,26 @@ $pink: #ffebeb;
         z-index: 100;
         background-size: cover;
         // background-position: center;
+        @media screen and (max-width: 375px) {
+          // display: unset;
+          transform: unset;
+          width: 200px;
+          height: 300px;
+        }
       }
       .bg {
         background-color: $blue;
         width: 300px;
         height: 400px;
         transform: translate(45%, 50%);
+        @media screen and (max-width: 375px) {
+          display: none;
+        }
       }
     }
     .content_box {
-      position: absolute;
-      width: 100%;
+      position: relative;;
+      // width: 100%;
       left: 0;
       .text {
         font-family: "Tangerine", cursive;
@@ -236,14 +329,27 @@ $pink: #ffebeb;
         letter-spacing: 2px;
         transform: translate(-40%, 80%);
         text-align: justify;
-        background-color: $pink;
+        background-color:#ffebeb;
         padding: 10px 0 10px 550px;
+        @media screen and (max-width: 375px) {
+          // display: unset;
+          transform: unset;
+          background-color: unset;
+          font-size: 20px;
+          padding:0 5px;
+          margin-top:100% ;
+        }
       }
       .btn {
         transform: translate(70%, 580%);
         color: white;
         font-family: "Tangerine", cursive;
         font-size: 25px;
+        @media screen and (max-width: 375px) {
+          transform: unset;
+          margin:50px 0 0 115px  ;
+
+        }
       }
       #exampleModalLong2 {
         font-family: "Tangerine", cursive;
@@ -251,6 +357,11 @@ $pink: #ffebeb;
         font-size: 28px;
         letter-spacing: 2px;
         text-align: justify;
+        @media screen and (max-width: 375px) {
+          // background-color: unset;
+          font-size: 20px;
+          // width:48%;
+        }
       }
     }
   }
@@ -273,16 +384,27 @@ $pink: #ffebeb;
         position: absolute;
         transform: translate(30%, 40%);
         z-index: 100;
+        @media screen and (max-width: 375px) {
+          // display: unset;
+          width: 200px;
+          height: 300px;
+          transform: unset;
+          margin-left:80px ;
+          
+        }
       }
       .bg {
         background-color: $blue;
         width: 300px;
         height: 400px;
         transform: translate(10%, 50%);
+        @media screen and (max-width: 375px) {
+          display: none;
+        }
       }
     }
     .content_box {
-      position: absolute;
+      position: relative;
       width: 100%;
       right: 0;
       .text {
@@ -292,10 +414,26 @@ $pink: #ffebeb;
         letter-spacing: 2px;
         transform: translate(33%, 80%);
         text-align: justify;
-        background-color: $pink;
+        background-color:#ffebeb;
         padding: 10px 0 10px 40px;
+        @media screen and (max-width: 375px) {
+          background-color: unset;
+          transform: unset;
+          padding: 0;
+          p{
+            display: none;
+          }
+        }
         h1 {
           color: 40px;
+          @media screen and (max-width: 375px) {
+            font-size: 25px;
+            
+            position: absolute;
+            top:370px;
+            left:60px;
+            
+          }
         }
       }
       .btn {
@@ -303,6 +441,12 @@ $pink: #ffebeb;
         color: white;
         font-family: "Tangerine", cursive;
         font-size: 25px;
+        @media screen and (max-width: 375px) {
+          transform: unset;
+          position: absolute;
+          top:490px;
+          left:120px;
+        }
       }
       #exampleModalLong3 {
         font-family: "Tangerine", cursive;
@@ -310,6 +454,11 @@ $pink: #ffebeb;
         font-size: 28px;
         letter-spacing: 2px;
         text-align: justify;
+        @media screen and (max-width: 375px) {
+          // background-color: unset;
+          font-size: 20px;
+          width:48%;
+        }
       }
     }
   }
@@ -319,6 +468,9 @@ $pink: #ffebeb;
   position: relative;
   width: 100%;
   height: 52vh;
+  @media screen and (max-width: 375px) {
+    background-image: none;
+  }
   p {
     margin: 0;
     font-family: "Tangerine", cursive;
@@ -328,5 +480,11 @@ $pink: #ffebeb;
     letter-spacing: 1px;
     position: absolute;
     transform: translate(100%, 540%);
+    @media screen and (max-width: 375px) {
+      transform: unset;
+      text-align: justify;
+      padding: 5px 5px;
+      background-image: url("./img/06.jpg");
+    }
   }
 }

@@ -30,11 +30,12 @@
   left: 5%;
   z-index: 1;
 }
-/* 選單白底 寫relative 吃東西的女生就會出來 but banner的swiper會被推下去*/
 .container-fluid .banner_img .main-navigation {
   position: absolute;
   top: calc(15vh + 180px);
   left: 30px;
+  width: 100%;
+  height: 80.5vh;
 }
 .container-fluid .banner_img .main-navigation .inner_box {
   font-family: "Tangerine", cursive;
@@ -64,18 +65,19 @@
   list-style-type: none;
   position: absolute;
   top: -14.5rem;
-  transform: translate(8.5%, 0);
-  /* padding: 40% 90% 13.7% 35%; */
-  line-height: 1px;
+  transform: translate(4.8%, 0);
+  padding: 3% 72.5% 13.7% 35%;
+  /* line-height: 1px; */
   /* margin-bottom: 0; */
   white-space: nowrap;
   color: #775254;
+ 
 }
 .container-fluid .banner_img .main-navigation .inner_box .ul_box li {
-  /* width: 100px; */
-  height: 16vh;
+  /* width: 120%; */
+  height: 9.2vh;
   /* margin: 0 200px; */
-  padding: 60px 250px;
+  /* padding: 60px 210px; */
 }
 .container-fluid .banner_img .main-navigation .inner_box .ul_box a {
   color: #775254;
@@ -87,17 +89,17 @@
   background-image: url("./img/navbar.jpg");
   background-size: cover;
   position: absolute;;
-  top: -15.2rem;
-  left: 133.7%; 
-  width: 80%;
-  height: 80.5vh;
+  top: -14.5rem;
+  left: 115%; 
+  width: 40%;
+  height: 75vh;
 }
 .container-fluid .banner_img .main-navigation .toggle_button {
   position: absolute;
   z-index: 3;
   /* left: 3.7%;
   top: -95px; */
-  transform: translate(95%, -80%);
+  transform: translate(85%, -1300%);
 }
 /* .link_3{
   border-block-width: 0;
@@ -184,9 +186,10 @@ body {
   margin-bottom: 150px;
 }
 .swiper-container {
-  width: 60%;
+  width: 100%;
   height: 100%;
   margin-top: 3em;
+  overflow:unset;
 }
 
 .swiper-container-banner {
@@ -412,6 +415,7 @@ body {
 
 .container{
   display:flex;
+  position: relative;
   
 }
 .img_1{
@@ -420,6 +424,8 @@ body {
 .modal-body .container .thing .thing_1{
   font-family: "Tangerine", cursive;
   font-size:1.5em;
+  position: absolute;
+  right: -50%;;
 }
 
 .thing{
@@ -439,8 +445,6 @@ body {
   left: 49%;
   top: 7%;
 }
-
-  /* display: block;   */
 .modal-body .container .thing .thing_2{
     font-family: "Tangerine", cursive;
     font-size:1.5em;

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Tangerine:700&display=swap" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 
@@ -14,17 +15,18 @@
         }
 
         .product_modal_body {
-            width: 300px;
-            height: 500px;
-            border: 1px solid black;
-            background-color: aquamarine;
+            width: 600px;
+            height: 450px;
+            border: 7px outset #aa7374;
+            background-color: #fffcf893;
             letter-spacing: 1.8px;
             position: fixed;
-            left: calc(50vw - 150px);
+            left: calc(50vw - 300px);
             top: calc(50vh - 250px);
             z-index: 20;
             opacity: 1;
             animation: drop-body .5s linear;
+
         }
 
         .product_modal_mask {
@@ -39,18 +41,87 @@
             animation: drop-mask .5s linear;
         }
 
+        h2 {
+            display: inline-block;
+            margin-left: 40%;
+            margin-bottom: 0;
+            font-size: 35px;
+            font-family: "Tangerine", cursive;
+            font-weight: bold;
+            color: #775254;
+
+        }
+
+        .body_m {
+            display: flex;
+            width:68vh;
+            
+        }
+
+        .body_r_b {
+            display: flex;
+            justify-content: space-between;
+
+
+        }
+
+        .thing_all {
+            margin-top: 30px;
+            margin-left: 100px;
+            font-size: 20px;
+            letter-spacing: 0.1em;
+            font-family: "Tangerine", cursive;
+            font-weight: bold;
+            line-height: 1.5;
+            color: #775254;
+        }
+
+
+        .thing_1::before {
+            content: "";
+            width: 1.5%;
+            height: 1.5%;
+            background-color: #775254;
+            border-radius: 50%;
+            position: absolute;
+            left: 53%;
+            top: 24%;
+        }
+
+        .thing_2::before {
+            content: "";
+            width: 1.5%;
+            height: 1.5%;
+            background-color: #775254;
+            border-radius: 50%;
+            position: absolute;
+            left: 53%;
+            top: 30%;
+        }
+
+        .thing_3::before {
+            content: "";
+            width: 1.5%;
+            height: 1.5%;
+            background-color: #775254;
+            border-radius: 50%;
+            position: absolute;
+            left: 53%;
+            top: 37%;
+        }
+
         .active {
             display: block;
         }
 
         @keyframes drop-mask {
-            0%{
+            0% {
                 opacity: 0;
             }
         }
-        
+
         @keyframes drop-body {
-            0%{
+            0% {
                 opacity: 0;
                 top: calc(50vh - 275px);
             }
@@ -58,12 +129,51 @@
     </style>
 </head>
 
-<body>
+<!-- <div class="img_1" img src="./img/01-cake/cake-02.png" width="30%" alt=""></div>
+<div class="thing">
+    <div class="thing_1">French Blue Silk Fresh Cream</div>
+    <div class="thing_2">Tahiti Vanilla Pods</div>
+    <div class="thing_3">Honey sponge cake</div>
+</div>
+<div class="price_item">
+    <div class="price">NT 999</div>
+    <div class="img_2" img src="./img/button.png" width="50vh" alt=""></div>>
+</div> -->
 
+
+<body>
     <div class="product_modal">
-        <div class="product_modal_btn">互動視窗</div>
-        <div class="product_modal_body d-none">Lorem1</div>
+        <div class="product_modal_btn">Bumblebee</div>
+        <div class="product_modal_body d-none">
+            <h2>Bumblebee</h2>
+            <div class="body_m">
+                <img src="./img/01-cake/cake-02.png" width="40%" alt="">
+                <div class="thing_all">
+                    <div class="thing_1">French Blue Silk Fresh Cream</div>
+                    <div class="thing_2">Tahiti Vanilla Pods</div>
+                    <div class="thing_3">Honey sponge cake</div>
+
+                    <div class="body_r_b">
+                        <div class="price">NT 999</div>
+                        <img src="./img/button.png" width="30%" alt="">
+                    </div>
+
+                </div>
+            </div>
+            <div class="body_buybutton">
+
+            </div>
+
+
+
+        </div>
+
     </div>
+
+
+
+
+
 
     <div class="product_modal">
         <div class="product_modal_btn">互動視窗</div>

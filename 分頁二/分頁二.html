@@ -27,6 +27,7 @@
                     <nav class="main-navigation">
                         <div class="inner_box">
                             <ul class="ul_box">
+                                <li><a href="http://127.0.0.1:5502/chat/%E9%A6%96%E9%A0%81/chat.html">Home</a></li>
                                 <li><a
                                         href="http://127.0.0.1:5502/chat/%E5%88%86%E9%A0%81%E4%B8%80/%E5%88%86%E9%A0%81%E4%B8%80.html">About
                                         Chat</a></li>
@@ -90,8 +91,63 @@
                 </div>
             </div>
         </div>
-
     </section>
+
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter0">
+        Chat p
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter0" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container ">
+                        <div class="img_1"><img src="./img/01-cake/cake-01.png" alt=""></div>
+
+                        <div>
+                            <div class="thing">
+                                <div class="thing_1">French Blue Silk Fresh Cream</div>
+                                <div class="thing_2">Tahiti Vanilla Pods</div>
+                                <div class="thing_3">Honey sponge cake</div>
+                            </div>
+                            <div class="product_item">
+                                <div class="price">NT 999</div>
+                                <div>
+
+                                    <div class="product-item-list">
+                                        <div class="item-list-01">
+                                            <div id="btnA" class="item-list-btn">
+                                                <div id="a_one_m" class="btnleft btnStyleLeft">
+                                                    <img src="./img/button.png" width="400%" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
 
 
     <!-- 從這開始是互動按鈕 -->
@@ -124,8 +180,8 @@
                             <div class="product_item">
                                 <div class="price">NT 999</div>
                                 <div>
-                                    <!-- + - 按鈕的 -->
-                                    <div class="product-item-list">
+
+                                    <!-- <div class="product-item-list">
                                         <div class="item-list-01">
                                             <div id="btnA" class="item-list-btn">
                                                 <div id="a_one_m" class="btnleft btnStyleLeft">
@@ -133,7 +189,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -607,8 +663,8 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
- 
-    // Initialize Swiper
+
+        // Initialize Swiper
 
         var swiper = new Swiper('.product-swiper', {
             slidesPerView: 3,

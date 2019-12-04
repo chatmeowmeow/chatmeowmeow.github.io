@@ -59,6 +59,10 @@ $border:#aa7374;
           pointer-events: all;
           left: 0;
           transition:opacity 3s, left 2s;
+          @media screen and (max-width: 375px) {
+            left: unset;
+            top: 0;
+          }
         }
         .ul_box {
           background-color: #fffcf8;
@@ -67,13 +71,26 @@ $border:#aa7374;
           position: absolute;
           top: -15.2rem;
           left: 10.3%;
-          padding: 13% 90% 13.7% 35%;
+          padding: 10% 90%  6% 35%;
           line-height: 100px;
-          margin-bottom: 0;
+          // margin-bottom: 5px;
           white-space: nowrap;
-          color: $coffee;
+          @media screen and (max-width: 375px) {
+            background-color: unset;
+            background-image: url("./img/navbar.jpg");
+            background-size: cover;
+            width:205%;
+            height: 70vh;
+            transform: translate(-5%,35.5%);
+            // line-height: 10px;
+          }
           a{
             color:$coffee ;
+            @media screen and (max-width:375px){
+              font-size: 30px;
+              line-height: 10px;
+              letter-spacing: 5px;
+            }
           }
         }
         .nav_img {
@@ -83,7 +100,10 @@ $border:#aa7374;
           top: -15.2rem;
           left: 133.7%;
           width: 56%;
-          height: 80.5vh;
+          height: 77.7vh;
+          @media screen and (max-width:375px){
+            display: none;
+          }
         }
       }
       .toggle_button {
@@ -143,7 +163,7 @@ $border:#aa7374;
         top: 45%;
         left: 10%;
         background-color:rgba(255, 255, 255, 0.623);
-        left:20%;
+        left:30%;
         top:35%;
       }
     }
@@ -155,6 +175,10 @@ $border:#aa7374;
     height: 65vh;
     // width:100%;
     // background-color: burlywood;
+    @media screen and (max-width:375px){
+      height:28vh;
+      
+    }
     .text_box {
       // width:100px;
       margin: auto;
@@ -164,6 +188,10 @@ $border:#aa7374;
         font-family: "Tangerine", cursive;
         font-size: 40px;
         color: $coffee;
+        @media screen and (max-width:375px){
+          font-size: 25px;
+          // transform: translate(17%,0);
+        }
       }
     }
     .border_line {
@@ -172,6 +200,11 @@ $border:#aa7374;
       background-color: #775254;
       margin: auto;
       margin: 20px auto;
+      @media screen and (max-width:375px){
+        margin: 0;
+        transform: translate(17%,0);
+        
+      }
     }
     .content1 {
       margin: auto;
@@ -180,12 +213,28 @@ $border:#aa7374;
       font-size: 30px;
       align-items: center;
       color: $coffee;
+      @media screen and (max-width:375px){
+        font-size: 20px;
+        // justify-content:unset;
+        // transform: translate(12%,0);
+        
+        .img-thumbnail{
+          width:50px;
+        }
+        .aa{
+          width:50px;
+        }
+      }
     }
     .border_line1 {
       width: 75%;
       height: 3px;
       background-color: #775254;
       margin: 20px auto;
+      @media screen and (max-width:375px){
+        margin: 0;
+        transform: translate(17%,0);
+      }
     }
     .text_box1 {
       margin: auto;
@@ -194,6 +243,11 @@ $border:#aa7374;
         font-family: "Tangerine", cursive;
         font-size: 30px;
         color: $coffee;
+        @media screen and (max-width:375px){
+          font-size: 20px;
+         
+          
+        }
       }
     }
   }
@@ -213,18 +267,30 @@ $border:#aa7374;
       width:75%;
       margin: auto;
       color:$coffee;
+      @media screen and (max-width:375px){
+        font-size: 25px;
+        width:85%;
+      }
     }
     .form{
       // position: absolute;
       transform: translateX(13%);
       font-size:30px ;
-      font-family: "Tangerine", cursive;
+      font-family: "Tangerine", cursive;        
       margin-top:60px ;
       color:$coffee;
+      @media screen and (max-width:375px){
+        font-size: 25px;
+      }
       .btn{
         font-size: 30px;
         width:200px;
         margin:40px 0 0 5px ;
+        @media screen and (max-width:375px){
+          width: 150px;
+          height: 50px;
+         
+        }
       }
       .Address{
         margin-bottom:0;
@@ -241,10 +307,36 @@ $border:#aa7374;
       font-size: 25px;
       letter-spacing: 3px;
       color:$coffee;
+      @media screen and (max-width:375px){
+        font-size: 20px;
+        
+        .form-check-label1{
+          transform: translate(-30%,-3480%);
+          // text-align: justify;
+          letter-spacing:1px;
+          opacity: 1;
+        }
+        .form-check-label2{
+          transform: translate(-30%,-1740%);
+          // text-align: justify;
+          letter-spacing:1px;
+          opacity: 1;
+        }
+        .form-check-label3{
+          transform: translate(-28%,-700%);
+          text-align: justify;
+          letter-spacing: 1px;
+          opacity: 1;
+        }
+      }
       .form-check-input{
         top:10px;
-       
+        @media screen and (max-width:375px){
+          font-size: 20px;
+          transform: translate(-555%,-1050px);
+        }
       }
+      
     }
   }
 }
@@ -258,6 +350,11 @@ $border:#aa7374;
     letter-spacing: 2px;
     text-align: center;
     color:$coffee;
+    @media screen and (max-width:375px){
+      font-size: 17px;
+      text-align: justify;
+      transform: translate(0,-10%);
+    }
   }
 }
 

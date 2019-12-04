@@ -70,7 +70,7 @@ $border:#aa7374;
           position: absolute;
           top: -15.2rem;
           left: 10.3%;
-          padding: 13% 90% 13.7% 35%;
+          padding: 13% 90% 3.4% 35%;
           line-height: 100px;
           margin-bottom: 0;
           white-space: nowrap;
@@ -184,7 +184,7 @@ $border:#aa7374;
             @media screen and (max-width:375px) {
               font-size: 20px;
               text-align:justify;
-              margin:20px 0 0 45px;
+              // margin:20px 0 0 45px;
             }
         }
         .form{
@@ -212,8 +212,8 @@ $border:#aa7374;
             transform: translate(0%,-110%);
             font-size: 30px;
             @media screen and (max-width:375px) {
-              transform: translate(-160%,830%);
-              height:8vh ;
+              transform: translate(-160%,790%);
+              height:6vh ;
               
             }
           }
